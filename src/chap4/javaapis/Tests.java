@@ -50,7 +50,7 @@ public class Tests {
 		String s1 = "Java";
 		String s2 = "Java";
 		s2.substring(2);
-		
+		 
 
 		String s3 = s1.concat(" EE"); // s1 value remains unchanged
 		System.out.println(s1 == s3);// false
