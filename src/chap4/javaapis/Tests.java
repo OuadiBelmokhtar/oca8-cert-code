@@ -3,6 +3,7 @@ package chap4.javaapis;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,8 +73,11 @@ public class Tests {
 		List<Character> list1 = new ArrayList<Character>(1);
 		list1.add('k');
 		
-//		LocalTime lt=LocalTime.of(0, 0);
-//		LocalDate ld=LocalDate.of(0, 0, 0);
+		//LocalTime lt=LocalTime.of(0, 0);
+		LocalDate ld=LocalDate.of(2017, 1, 1);
+		Period period=Period.ofDays(1);
+		DateTimeFormatter formatter=DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+		System.out.println(formatter.format(ld));
 		
 		
 		
