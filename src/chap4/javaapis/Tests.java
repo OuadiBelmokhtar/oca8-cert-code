@@ -76,8 +76,8 @@ public class Tests {
 		//LocalTime lt=LocalTime.of(0, 0);
 		LocalDate ld=LocalDate.of(2017, 1, 1);
 		Period period=Period.ofDays(1);
-		DateTimeFormatter formatter=DateTimeFormatter.ISO_OFFSET_DATE_TIME;
-		System.out.println(formatter.format(ld));
+		DateTimeFormatter formatter=DateTimeFormatter.ofPattern("MM-dd-yyyy");
+		System.out.println(formatter.format(ld)); 
 		
 		
 		
