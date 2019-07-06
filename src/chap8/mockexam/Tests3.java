@@ -49,7 +49,7 @@ public class Tests3 {
 //		LocalDate.of
 //		
 		short so = Short.MAX_VALUE;
-		
+
 		Integer i1 = 1;
 		Integer i2 = new Integer(1);
 		int i3 = 1;
@@ -62,8 +62,30 @@ public class Tests3 {
 		System.out.println(i1 == b1); // will not even compile because type of i1 and b1 references are classes that
 										// are not in the same class hierarchy. So == knows at compile time itself that
 										// they can't point to the same object.
-		System.out.println(i1.equals(i2)); // will return true because both are Integer objects and both have the value 1.
-		i1.equals(b1) ; i1.equals(g1); // will return false because they are pointing to objects of different types.
+		System.out.println(i1.equals(i2)); // will return true because both are Integer objects and both have the value
+											// 1.
+		i1.equals(b1);
+		i1.equals(g1); // will return false because they are pointing to objects of different types.
+
+		int i8 = 3;
+		float f8 = i8;
+		
+		// Widening primitive conversion
+		long l4 = 89687368736872L;
+
+		float f4 = l4; // float bigger than long
+		f4 = 10; // Ok, float bigger than int
+		f4 = 10.5; // KO, double bigger than float
+
+		double d4 = l4; // double bigger than long
+		d4 = f4; // // double bigger than float
+
+		int i5 = l4; // explicit cast needed, because long bigger than int
+
+		char c4 = 'c'; // char is equivalent to int
+		i5 = c4; // Ok, char equal to int
+		c4 = l4;// long bigger than char
+		
 
 	}
 
@@ -73,6 +95,11 @@ public class Tests3 {
 
 	void $run() {
 
+		final int k = 10;
+		byte b = k; // Okay because k is final and 10 fits into a byte
+		final float f = 10.0;// will not compile because 10.0 is a double
+								// even though the value 10.0 fits into a float
+		int i = f;// will not compile.
 	}
 
 	int rn() {
