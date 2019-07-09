@@ -69,9 +69,10 @@ public class Tests3 {
 
 		int i8 = 3;
 		float f8 = i8;
-		
-		// Widening primitive conversion
+
+		// Widening/Narrowing primitive conversion
 		long l4 = 89687368736872L;
+		l4 = 1000;
 
 		float f4 = l4; // float bigger than long
 		f4 = 10; // Ok, float bigger than int
@@ -83,9 +84,12 @@ public class Tests3 {
 		int i5 = l4; // explicit cast needed, because long bigger than int
 
 		char c4 = 'c'; // char is equivalent to int
-		i5 = c4; // Ok, char equal to int
+		i5 = c4; // Ok, char is smaller than int
+		c4 = i5; // KO, int is bigger than char
+					// not compile because it is trying to assign an int to a char. Although the
+					// value of i can be held by the char but since 'i' is not a constant but a
+					// variable, implicit narrowing will not occur.
 		c4 = l4;// long bigger than char
-		
 
 	}
 

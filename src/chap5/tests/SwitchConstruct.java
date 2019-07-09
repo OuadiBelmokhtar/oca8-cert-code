@@ -59,8 +59,10 @@ public class SwitchConstruct {
 
 		byte foo = 120;
 		switch (foo) {
-		
 
+//		default:
+//			System.out.println("default"); // will not be executed in this order
+		// break;
 		case 2:
 			System.out.println("e");
 		case 110:
@@ -76,7 +78,7 @@ public class SwitchConstruct {
 			System.out.println("guru");
 		default:
 			System.out.println("default");
-			//break;
+			// break;
 		}
 
 	}
