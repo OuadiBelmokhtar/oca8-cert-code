@@ -57,7 +57,7 @@ public class Test4 {
 	
 	private void m() {
 	
-		
+		 //
 	}; // Ok
 
 }
