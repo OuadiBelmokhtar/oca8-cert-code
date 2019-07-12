@@ -100,7 +100,8 @@ public class Tests3 {
 	void $run() {
 
 		final int k = 10;
-		byte b = k; // Okay because k is final and 10 fits into a byte
+		byte b = k; // Ok, because k is final and 10 fits into a byte
+		char c = 200; // OK even if 200 is int, because 200 is a compile-time constant and it fits into a char.
 		final float f = 10.0;// will not compile because 10.0 is a double
 								// even though the value 10.0 fits into a float
 		int i = f;// will not compile.
