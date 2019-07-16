@@ -90,7 +90,10 @@ public class Tests3 {
 					// value of i can be held by the char but since 'i' is not a constant but a
 					// variable, implicit narrowing will not occur.
 		c4 = l4;// long bigger than char
-
+		short s9 = 5;
+		char c5 = s9; // char is smaller than short, but it is signed
+		byte b3 = 4;
+		c5 = b3; // char is smaller than byte, but it is signed
 	}
 
 	static void ____() {
@@ -101,7 +104,8 @@ public class Tests3 {
 
 		final int k = 10;
 		byte b = k; // Ok, because k is final and 10 fits into a byte
-		char c = 200; // OK even if 200 is int, because 200 is a compile-time constant and it fits into a char.
+		char c = 200; // OK even if 200 is int, because 200 is a compile-time constant and it fits
+						// into a char.
 		final float f = 10.0;// will not compile because 10.0 is a double
 								// even though the value 10.0 fits into a float
 		int i = f;// will not compile.

@@ -3,13 +3,35 @@ package chap8.mockexam;
 import java.util.Arrays;
 
 public class Tests5 {
-	public static void main(String[] args) {
-		try {
+	private final int AB;
 
-			doTest();// throws ArrayIndexOutOfBoundsException
-		} catch (MyException me) {// does not catch the thrown exception
-			System.out.println("MyException catch block: " + me);
-		}
+	public Tests5() {
+		// AB=9;
+	}
+
+	{
+		//AB = 8;
+	}
+
+	public static void main(String[] args) {
+
+//		try {
+//
+//			doTest();// throws ArrayIndexOutOfBoundsException
+//		} catch (MyException me) {// does not catch the thrown exception
+//			System.out.println("MyException catch block: " + me);
+//		}
+//
+//		System.out.println(true); // OK, print true
+//		System.out.println(null); // Comp Err
+//		System.out.println(true + null); // Comp Err
+//		System.out.println(null + null); // Comp Err
+//		System.out.println(null + "null"); // OK, print nullnull
+
+		int k = 1;
+		k += (k = 4) * (k + 2);
+		System.out.println(k);// 25 not 28
+
 	}
 
 	static void doTest() throws MyException {
@@ -30,8 +52,8 @@ public class Tests5 {
 		}
 		while (j > 0) {
 			System.out.println(j--);
-			if (j == 4)
-				break POINT1;// The label POINT1 is missing
+			// if (j == 4)
+			// break POINT1;// The label POINT1 is missing
 		}
 	}
 
@@ -40,6 +62,6 @@ public class Tests5 {
 class MyException extends Exception { // is a checked exception
 	public MyException(String msg) {
 		super(msg);
-		
+
 	}
 }
