@@ -3,17 +3,26 @@ package chap8.mockexam;
 import java.util.Arrays;
 
 public class Tests5 {
+
 	private final int AB;
 
-	public Tests5() {
-		// AB=9;
-	}
-
 	{
-		//AB = 8;
+		// AB = 10;
 	}
 
-	public static void main(String[] args) {
+	public Tests5() {
+		AB = 3;
+
+		// A constant holding a Not-a-Number (NaN) value of type float and double.
+		System.out.println(Float.NaN);
+		System.out.println(Double.NaN);
+		Double d = 9;
+		System.out.println(d.NaN);
+	}
+
+//
+//
+	public static void main1(String[] args) {
 
 //		try {
 //
@@ -57,6 +66,21 @@ public class Tests5 {
 		}
 	}
 
+	public static void printSum(int a, int b) {
+		System.out.println("In int " + (a + b));
+	}
+
+	public static void printSum(Integer a, Integer b) {
+		System.out.println("In Integer " + (a + b));
+	}
+
+	public static void printSum(double a, double b) {
+		System.out.println("In double " + (a + b));
+	}
+
+	public static void main(String[] args) {
+		printSum(1, 2); // calls printSum(int, int)
+	}
 }
 
 class MyException extends Exception { // is a checked exception
