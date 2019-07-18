@@ -107,8 +107,8 @@ public class Tests3 {
 		char c = 200; // OK even if 200 is int, because 200 is a compile-time constant and it fits
 						// into a char.
 		final float f = 10.0;// will not compile because 10.0 is a double
-								// even though the value 10.0 fits into a float
-		int i = f;// will not compile.
+								// double, float and long are not allowed for implicit narrowing
+		int i = f;// will not compile, double, float and long are not allowed for implicit narrowing
 	}
 
 	int rn() {

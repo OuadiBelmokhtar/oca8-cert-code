@@ -37,9 +37,16 @@ public class Tests5 {
 //		System.out.println(null + null); // Comp Err
 //		System.out.println(null + "null"); // OK, print nullnull
 
-		int k = 1;
-		k += (k = 4) * (k + 2);
-		System.out.println(k);// 25 not 28
+//		int k = 1;
+//		k += (k = 4) * (k + 2);
+//		System.out.println(k);// 25 not 28
+
+		
+		int a = b = c = 100; // KO, b and c are not declared
+		int d = 0, e = 0;
+		int f = d = e = 100; // OK, all vars are declared
+		int g, h, i = 40; // OK
+		int j = 2, k; // OK
 
 	}
 
