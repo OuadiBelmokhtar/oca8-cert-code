@@ -3,7 +3,7 @@ package chap8.mockexam;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test6 {
+public class Tests6 {
 
 	final int a;
 
