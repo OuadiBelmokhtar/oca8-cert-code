@@ -23,11 +23,23 @@ public class Tests7 {
 
 		System.out.println(I == s); // prints false
 
-		boolean bool = (a = true) || (b1 = true) && (c1 = true);
+		boolean bool = (a = true) || ((b1 = true) && (c1 = true));
 		// if ((a = true) || (b1 = true) && (c1 = true))
 		System.out.println(a + ", " + b1 + ", " + c1);
 
 		int i2 = 1____3; // OK
 		System.out.println(i2); // prints 13
+
+		
+		int i5 = 10;
+		// The method println(boolean) in the type PrintStream
+		// is not applicable for the arguments (void)
+		//System.out.println(i < 20 ? out1() : out2());
+	}
+
+	private static void out2() {
+	}
+
+	private static void out1() {
 	}
 }
