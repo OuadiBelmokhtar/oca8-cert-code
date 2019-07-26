@@ -23,8 +23,17 @@ public class Tests8 {
 
 		Integer i1 = new Integer(1);
 		Integer i2 = 1;
-		System.out.println(i1 == i2);// prints false, because the creation of 
-									// i1 create a new object, and do not use cache
+		System.out.println(i1 == i2);// prints false, because the creation of
+										// i1 create a new object, and do not use cache
 
+		Integer i3 = 500;
+		Integer i4 = 500;
+		System.out.println(i3 == i4);// prints false, because 500>127, then
+										// i3 and i4 will be created as new objects
+
+		System.out.println(Float.NaN);
+
+		// Type mismatch: cannot convert from int to Double
+		Double d = 10; // 10.0 works
 	}
 }
