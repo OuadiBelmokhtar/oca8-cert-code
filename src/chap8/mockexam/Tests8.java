@@ -34,6 +34,8 @@ public class Tests8 {
 		System.out.println(Float.NaN);
 
 		// Type mismatch: cannot convert from int to Double
-		Double d = 10; // 10.0 works
+		//Double d = 10; // 10.0 works
+		Tests8 tests8=null;
+		System.out.println(tests8);
 	}
 }

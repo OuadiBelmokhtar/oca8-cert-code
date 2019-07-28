@@ -91,9 +91,9 @@ public class Tests3 {
 					// variable, implicit narrowing will not occur.
 		c4 = l4;// long bigger than char
 		short s9 = 5;
-		char c5 = s9; // char is smaller than short, but it is signed
+		char c5 = s9; // char is bigger than short, but it is signed
 		byte b3 = 4;
-		c5 = b3; // char is smaller than byte, but it is signed
+		c5 = b3; // char is bigger than byte, but it is signed
 	}
 
 	static void ____() {
