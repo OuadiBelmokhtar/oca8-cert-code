@@ -34,8 +34,12 @@ public class Tests8 {
 		System.out.println(Float.NaN);
 
 		// Type mismatch: cannot convert from int to Double
-		//Double d = 10; // 10.0 works
-		Tests8 tests8=null;
+		// Double d = 10; // 10.0 works
+		Tests8 tests8 = null;
 		System.out.println(tests8);
+
+		switch (9) { // Syntax error on token "{", SwitchLabels expected after this token
+			int a = 10;
+		}
 	}
 }
