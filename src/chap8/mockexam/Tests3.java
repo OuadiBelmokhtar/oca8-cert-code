@@ -68,7 +68,7 @@ public class Tests3 {
 		i1.equals(g1); // will return false because they are pointing to objects of different types.
 
 		int i8 = 3;
-		float f8 = i8;
+		float f8 = i8; 
 
 		// Widening/Narrowing primitive conversion
 		long l4 = 89687368736872L;
