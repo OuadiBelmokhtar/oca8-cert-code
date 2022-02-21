@@ -30,6 +30,9 @@ public class MyClass {
 		return 10;
 	} // // can be used without creating an instance
 
+	static void incrementSVar() {
+		 sVar++;
+	}
 	static void staticMethod() {
 		
 	}
@@ -38,6 +41,7 @@ public class MyClass {
 	void nonStaticMethod() {
 		staticMethod();
 	}
+	
 
 	public static void main(String[] args) {
 		MyClass mc = new MyClass();
